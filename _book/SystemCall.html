@@ -1,0 +1,497 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Unix System Call dan Management File · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="SystemFile.html" />
+    
+    
+    <link rel="prev" href="bashShell.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="KonsepDasar.html">
+            
+                <a href="KonsepDasar.html">
+            
+                    
+                    Konsep Dasar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="CommandLinux.html">
+            
+                <a href="CommandLinux.html">
+            
+                    
+                    Perintah Dasar Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="FileDirektori.html">
+            
+                <a href="FileDirektori.html">
+            
+                    
+                    Operasi File dan Struktur Direktori
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ProsesManajemen.html">
+            
+                <a href="ProsesManajemen.html">
+            
+                    
+                    Proses dan Manajemen Proses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="jadwalCPU.html">
+            
+                <a href="jadwalCPU.html">
+            
+                    
+                    Penjadwalan Pada CPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="bashShell.html">
+            
+                <a href="bashShell.html">
+            
+                    
+                    Kerja Bash Shell Pada Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="SystemCall.html">
+            
+                <a href="SystemCall.html">
+            
+                    
+                    Unix System Call dan Management File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="SystemFile.html">
+            
+                <a href="SystemFile.html">
+            
+                    
+                    System File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="deadlock.html">
+            
+                <a href="deadlock.html">
+            
+                    
+                    Deadlock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="manajemenMemori.html">
+            
+                <a href="manajemenMemori.html">
+            
+                    
+                    Manajemen Memori
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="booting.html">
+            
+                <a href="booting.html">
+            
+                    
+                    System Booting Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="perangkatKeras.html">
+            
+                <a href="perangkatKeras.html">
+            
+                    
+                    Manajemen Perangkat Keras
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="manajemenUser.html">
+            
+                <a href="manajemenUser.html">
+            
+                    
+                    Manajemen User dan Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="manajemenAplikasi.html">
+            
+                <a href="manajemenAplikasi.html">
+            
+                    
+                    Manajemen Aplikasi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Unix System Call dan Management File</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="system-call">System Call</h2>
+<h5 id="pengertian-dan-jenis-jenis-system-call">Pengertian dan jenis-jenis system call</h5>
+<p>System Call adalah penyedia antarmuka dari pelayanan-palayanan yang tersedia dengan Sistem Operasi. Umumnya System Call menggunakan bahasa C dan C++, meskipun tugas-tugas seperti hardware yang harus diakses langsung, maka menggunakan bahasa assembly.</p>
+<h5 id="bagaimana-cara-kerja-system-calls">Bagaimana cara kerja system calls?</h5>
+<p><center><img src="img/systemcall1.png" width="300" height="300" style="border-radius: 10px; box-shadow: 0px 0px 15px -2px gray"></center>
+Dari gambar diatas, file sumber mempunyai beberapa proses sampai akhirnya sampai di file tujuan.</p>
+<p>Pertama, kita dapat menulis suatu program sederhana untuk membaca satu file ke file lainnya. Program akan membutuhkan nama dari 2 file input dan output.
+Memasukkan nama file input dan menampilkannya pada layar, menerima masukan seperti inputan data dari keyboard yang diketik, dan nama file output hasil dari ketikkan kita. Setelah dua nama file telah diperoleh program harus membuka file input dan membuat file output. Masing-masing membutuhkan system call. Mungkin ada juga kondisi kesalahan yang dilakukkan operator.</p>
+<p>Ketika program mencoba untuk membuka file input dan ternyata tidak ada nama file itu atau bahwa file tersebut dilindungi pengaksesannya. Maka, kita harus membuat perintah di command interpreter (baca mengenai command interpreter) yang terdapat di OS kita dan membukakan file tersebut. Jika file input ada, maka kita harus membuat file output baru. Kita mungkin akan menemukan file output dengan nama yang sama. Situasi tersebut dapat membuat program dibatalkan (system call), atau kita dapat menghapus file yang ada dan membuat yang baru.</p>
+<p>Setelah dua file input dan output telah ditetapkan, maka program akan melooping membaca file input dan menulis ke file output sampai akhir file. Jika proses sudah selesai, program akan menutup kedua file dan akan terdapat pesan di layar bahwa proses telah selesai dan mengakhiri program dengan normal.</p>
+<h4 id="jenis-jenis-system-call">Jenis-jenis System Call:</h4>
+<ol>
+<li>Process control: mengontrol proses yang berjalan</li>
+<li>File management: memanage file-file yang berjalan pada program</li>
+<li>Device management: memanage device apa saja yang digunakan pada program</li>
+<li>Information Maintenance: sebagai penghubung antara user dengan sistem operasi dari berbagai informasi.</li>
+<li>Communication: pertukaran informasi dari proses yang berjalan dengan sistem operasi.</li>
+</ol>
+<h4 id="jenis-sistem-calls">Jenis sistem calls</h4>
+<p>System call menyediakan interface antara program (program pengguna yang berjalan) dan bagian OS. System call menjadi jembatan antara proses dan sistem operasi. System call ditulis dalam bahasa assembly
+Contoh: UNIX menyediakan system call: read, write =&gt; operasi I/O untuk berkas. Sering pengguna program harus memberikan data (parameter) ke OS yang akan dipanggil. Contoh pada UNIX: read(buffer, max_size, file_id); Mengenai shell, shell itu sendiri secara umum adalah layer yang berfungsi sebagai interface antara user dan inti dalam sistem operasi (kernel). Melalui shell, user dapat memberi perintah-perintah yang akan dikirim ke sistem operasi, sehingga shell ini merupakan layer yang menerima interaksi dari user secara langsung. Shell dalam SO secara umum dibagi menjadi 2, Comman d Line(CLI) dan Graphical(GUI). Jadi dengan kata lain, system calls berperan sebagai interface dalam layanan-layanan yang disediakan oleh sistem operasi.</p>
+<h4 id="system-call-dikelompokkan-dalam-5-kategori">System call dikelompokkan dalam 5 kategori:</h4>
+<p>Kontrol Proses &#x2022; Mengakhiri (end) dan membatalkan (abort);
+Mengambil (load) dan eksekusi (execute);
+Membuat dan mengakhiri proses;
+Menentukan dan mengeset atribut proses; &#x2022; Wait for time; &#x2022; Wait event, signal event; &#x2022; Mengalokasikan dan membebaskan memori.
+Contoh: Sistem operasi pada MS-DOS menggunakan sistem singletasking yang memiliki command interpreter yang akan bekerja pada saat start. Karena singletasking, maka akan menggunakan metode yang sederhana untuk menjalankan program dan tidak akan membuat proses baru.</p>
+<p>Manipulasi File
+Membuat dan menghapus file;
+Membuka dan menutup file;
+Membaca, menulis, dan mereposisi file;
+Menentukan dan mengeset atribut file;
+Manipulasi Device
+Meminta dan mebebaskan device;
+Membaca, menulis, dan mereposisi device;
+Menentukan dan mengeset atribut device;
+Informasi Lingkungan
+Mengambil atau mengeset waktu atau tanggal;
+Mengambil atau mengeset sistem data;
+Mengambil atau mengeset proses, file atau atribut atribut device;
+Komunikasi
+Membuat dan menghapus sambungan
+Mengirima dan menerima pesan;
+Mentransfer satus informasi</p>
+<h4 id="jenis-jenis-sistem-call-">Jenis-jenis Sistem Call :</h4>
+<p>Berikut ini adalah jenis system call:</p>
+<ul>
+<li><p>Manajemen Proses. System call untuk manajemen proses diperlukan untuk mengatur proses-proses yang sedang berjalan. Kita dapat melihat penggunaan system calls untuk manajemen proses pada Sistem Operasi Unix.
+Contoh yang paling baik untuk melihat bagaimana system call bekerja untuk manajemen proses adalah Fork. Fork adalah satu satunya cara untuk membuat sebuah proses baru pada sistem Unix.</p>
+</li>
+<li><p>Manajemen Berkas. System calls yang berhubungan dengan berkas sangat diperlukan. Seperti ketika kita ingin membuat atau menghapus suatu berkas, atau ketika ingin membuka atau menutup suatu berkas yang telah ada, membaca berkas tersebut, dan menulis berkas itu. System calls juga diperlukan ketika kita ingin mengetahui atribut dari suatu berkas atau ketika kita juga ingin merubah atribut tersebut. Yang termasuk atribut berkas adalah nama berkas, jenis berkas, dan lain-lain. Ada juga system calls yang menyediakan mekanisme lain yang berhubungan dengan direktori atau sistem berkas secara keseluruhan. Jadi bukan hanya berhubungan dengan satu spesifik berkas. Contohnya membuat atau menghapus suatu direktori, dan lain-lain.
+Manajemen Piranti. Program yang sedang dijalankan kadang kala memerlukan tambahan sumber daya. Jika banyak pengguna yang menggunakan sistem dan memerlukan tambahan sumber daya maka harus meminta peranti terlebih dahulu. Lalu setelah selesai, penggunaannnya harus dilepaskan kembali dan ketika sebuah peranti telah diminta dan dialokasikan maka peranti tersebut bisa dibaca, ditulis, atau direposisi.</p>
+</li>
+<li><p>System Call Informasi/Pemeliharaan. Beberapa system calls disediakan untuk membantu pertukaran informasi antara pengguna dan sistem operasi, contohnya adalah system calls untuk meminta dan mengatur waktu dan tanggal atau meminta informasi tentang sistem itu sendiri, seperti jumlah pengguna, jumlah memori dan disk yang masih bisa digunakan, dan lain-lain. Ada juga system calls untuk meminta informasi tentang proses yang disimpan oleh sistem dan system calls untuk merubah informasi tersebut. Dua model komunikasi:</p>
+</li>
+<li><p>Message-passing. Pertukaran informasi dilakukan melalui fasilitas komunikasi antar proses yang disediakan oleh sistem operasi. &#x2022; Shared-memory. Proses menggunakan memori yang bisa digunakan oleh berbagai proses untuk pertukaran informasi dengan membaca dan menulis data pada memori tersebut. Dalam message-passing, sebelum komunikasi dapat dilakukan harus dibangun dulu sebuah koneksi. Untuk itu diperlukan suatu system calls dalam pengaturan koneksi tersebut, baik dalam menghubungkan koneksi .</p>
+</li>
+<li><p>System Calls For Signaling,</p>
+</li>
+</ul>
+<p>Pemanggilan sinyal interupsi yang digunakan untuk menghentikan suatu proses jika terdapat kesalahan atau jika ada proses lainnya yang perlu didahulukan.</p>
+<ul>
+<li>System Calls for File Management,</li>
+</ul>
+<p>Sistem untuk manajemen file baik untuk membuat, membaca, membatasi pemakai memanipulasi file, dsb.</p>
+<ul>
+<li>System Calls for Directory Manajemen,</li>
+</ul>
+<p>Sistem untuk mengatur suatu direktori yang berisikan file-file yang biasanya sudah dispesifikasikan tujuannya, seperti untuk user tertentu, dan untuk pemakaian secara bersama, sehingga tidak perlu banyak mengatur file-file tersebut tetapi cukup dengan mengatur direktorinya saja.</p>
+<ul>
+<li>System Call for Protection,</li>
+</ul>
+<p>Sistem untuk menjaga keamanan pada suatu file/direktori sehingga hanya user tertentu yang dapat menggunakannya, untuk mencegah hal-hal yang tidak diinginkan.</p>
+<ul>
+<li>Sistem Program/OS
+Perangkat lunak yang bertindak sebagai perantara antara pengguna dan perangkat keras. membekali kemampuan diri sehingga yang bersangkutan dapat melakukan evaluasi performasi (unjuk kerja) dan mendaya gunakan sistem komputer secara efisien. Sistem Operasi Juga adalah Suatu modul program pada sistem komputer yang mangatur sumber daya pada komputer.</li>
+</ul>
+<h4 id="alasan-untuk-mengetahui-sistem-operasi">Alasan untuk mengetahui Sistem Operasi.</h4>
+<p>Setiap pemakai harus berhubungan dengan Sistem Operasi untuk dapat memanfaatkan komputer
+Untuk dapat memilih Sistem Operasi yang sesuai untuk suatu instalasi.
+Banyak konsep &amp; teknik yang terdapat pada Sistem Operasi yang berlaku umum yang dapat digunakan pada program aplikasi-aplikasi
+Untuk dapat merancang Sistem Operasi baru, atau memodifikasi Sistem Operasi yang telah ada</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="bashShell.html" class="navigation navigation-prev " aria-label="Previous page: Kerja Bash Shell Pada Linux">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="SystemFile.html" class="navigation navigation-next " aria-label="Next page: System File">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Unix System Call dan Management File","level":"1.8","depth":1,"next":{"title":"System File","level":"1.9","depth":1,"path":"SystemFile.md","ref":"SystemFile.md","articles":[]},"previous":{"title":"Kerja Bash Shell Pada Linux","level":"1.7","depth":1,"path":"bashShell.md","ref":"bashShell.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SystemCall.md","mtime":"2019-05-20T01:25:47.677Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-20T05:50:11.134Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,475 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Manajemen Memori · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="booting.html" />
+    
+    
+    <link rel="prev" href="deadlock.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="KonsepDasar.html">
+            
+                <a href="KonsepDasar.html">
+            
+                    
+                    Konsep Dasar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="CommandLinux.html">
+            
+                <a href="CommandLinux.html">
+            
+                    
+                    Perintah Dasar Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="FileDirektori.html">
+            
+                <a href="FileDirektori.html">
+            
+                    
+                    Operasi File dan Struktur Direktori
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ProsesManajemen.html">
+            
+                <a href="ProsesManajemen.html">
+            
+                    
+                    Proses dan Manajemen Proses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="jadwalCPU.html">
+            
+                <a href="jadwalCPU.html">
+            
+                    
+                    Penjadwalan Pada CPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="bashShell.html">
+            
+                <a href="bashShell.html">
+            
+                    
+                    Kerja Bash Shell Pada Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="SystemCall.html">
+            
+                <a href="SystemCall.html">
+            
+                    
+                    Unix System Call dan Management File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="SystemFile.html">
+            
+                <a href="SystemFile.html">
+            
+                    
+                    System File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="deadlock.html">
+            
+                <a href="deadlock.html">
+            
+                    
+                    Deadlock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="manajemenMemori.html">
+            
+                <a href="manajemenMemori.html">
+            
+                    
+                    Manajemen Memori
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="booting.html">
+            
+                <a href="booting.html">
+            
+                    
+                    System Booting Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="perangkatKeras.html">
+            
+                <a href="perangkatKeras.html">
+            
+                    
+                    Manajemen Perangkat Keras
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="manajemenUser.html">
+            
+                <a href="manajemenUser.html">
+            
+                    
+                    Manajemen User dan Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="manajemenAplikasi.html">
+            
+                <a href="manajemenAplikasi.html">
+            
+                    
+                    Manajemen Aplikasi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Manajemen Memori</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="manajemen-memori-di-linux">Manajemen Memori di Linux</h2>
+<h4 id="manajemen-memori-fisik">Manajemen Memori Fisik</h4>
+<p>Bagian ini menjelaskan bagaimana linux menangani memori dalam sistem. Memori manajemen merupakan salah satu bagian terpenting dalam sistem operasi. Karena adanya keterbatasan memori, diperlukan suatu strategi dalam menangani masalah ini. Jalan keluarnya adalah dengan menggunakan memori virtual. Dengan memori virtual, memori tampak lebih besar daripada ukuran yang sebenarnya.
+Dengan memori virtual kita dapat:</p>
+<ol>
+<li>Ruang alamat yang besar
+Sistem operasi membuat memori terlihat lebih besar daripada ukuran memori sebenarnya. Memori virtual bisa beberapa kali lebih besar daripada memori fisiknya.</li>
+<li>Pembagian memori fisik yang dil
+Manajemen memori membuat pembagian yang adil dalam pengalokasian memori antara proses-proses.</li>
+<li>Perlindungan
+Memori manajemen menjamin setiap proses dalam sistem terlindung dari proses-proses lainnya. Dengan demikian, program yang crash tidak akan mempengaruhi proses lain dalam sistem tersebut.</li>
+<li>Penggunaan memori virtual bersama
+Memori virtual mengizinkan dua buah proses berbagi memori diantara keduanya, contohnya dalam shared    library. Kode library dapat berada di satu tempat, dan tidak dikopi pada dua program yang berbeda.</li>
+</ol>
+<h4 id="memori-virtual">Memori Virtual</h4>
+<p><center><img src="img/memori1.png" width="500" height="300" style="border-radius: 10px; box-shadow: 0px 0px 15px -2px gray"></center>
+gambar model mapping virtual to physical address</p>
+<p>Memori fisik dan memori virtual dibagi menjadi bagian-bagian yang disebut page. Page ini memiliki ukuran yang sama besar. Tiap page ini punya nomor yang unik, yaitu Page Frame Number (PFN). Untuk setiap instruksi dalam program, CPU melakukan mapping dari alamat virtual ke memori fisik yang sebenarnya.</p>
+<p>Penerjemahan alamat di antara virtual dan memori fisik dilakukan oleh CPU menggunakan tabel page untuk proses x dan proses y. Ini menunjukkan virtial PFN 0 dari proses x dimap ke memori fisik PFN 1. Setiap anggota tabel page mengandung informasi berikut ini:</p>
+<ol>
+<li>Virtual PFN</li>
+<li>PFN fisik</li>
+<li>informasi akses page dari page tersebut</li>
+</ol>
+<p>Untuk menerjemahkan alamat virtual ke alamat fisik, pertama-tama CPU harus menangani alamat virtual PFN dan offsetnya di virtual page. CPU mencari tabel page proses dan mancari anggota yang sesuai degan virtual PFN. Ini memberikan PFN fisik yang dicari. CPU kemudian mengambil PFN fisik dan mengalikannya dengan besar page untuk mendapat alamat basis page tersebut di dalam memori fisik. Terakhir, CPU menambahkan offset ke instruksi atau data yang dibutuhkan. Dengan cara ini, memori virtual dapat dimap ke page fisik dengan urutan yang teracak.</p>
+<h4 id="demand-paging">Demand Paging</h4>
+<p>Cara untuk menghemat memori fisik adalah dengan hanya meload page virtual yang sedang digunakan oleh program yang sedang dieksekusi. Tehnik dimana hanya meload page virtual ke memori hanya ketika program dijalankan disebut demand paging.</p>
+<p>Ketika proses mencoba mengakses alamat virtual yang tidak ada di dalam memori, CPU tidak dapat menemukan anggota tabel page. Contohnya, dalam gambar, tidak ada anggota tabel page untuk proses x untuk virtual PFN 2 dan jika proses x ingin membaca alamat dari virtual PFN 2, CPU tidak dapat menterjemahkan alamat ke alamat fisik. Saat ini CPU bergantung pada sistem operasi untuk menangani masalah ini. CPU menginformasikan kepada sistem operasi bahwa page fault telah terjadi, dan sistem operasi membuat proses menunggu selama sistem operasi menagani masalah ini.</p>
+<p>CPU harus membawa page yang benar ke memori dari image di disk. Akses disk membutuhkan waktu yang sangat lama dan proses harus menunggu sampai page selesai diambil. Jika ada proses lain yang dapat dijalankan, maka sistem operai akan memilihnya untuk kemudian dijalankan. Page yang diambil kemudian dituliskan di dalam page fisik yang masih kosong dan anggota dari virtual PFN ditambahkan dalam tabel page proses. Proses kemudian dimulai lagi pada tempat dimana page fault terjadi. Saat ini terjadi pengaksesan memori virtual, CPU membuat penerjemahan dan kemudian proses dijalankan kembali.</p>
+<p>Demand paging terjadi saat sistem sedang sibuk atau saat image pertama kali diload ke memori. Mekanisme ini berarti sebuah proses dapat mengeksekusi image dimana hanya sebagian dari image tersebut terdapat dalam memori fisik.</p>
+<h4 id="swaping">Swaping</h4>
+<p>Jika memori fisik tiba-tiba habis dan proses ingin memindahkan sebuah page ke memori, sistem operasi harus memutuskan apa yang harus dilakukan. Sistem operasi harus adil dalam mambagi page fisik dalam sistem diantara proses yang ada, bisa juga sistem operasi menghapus satu atau lebih page dari memori untuk membuat ruang untuk page baru yang dibawa ke memori. Cara page virtual dipilih dari memori fisik berpengaruh pada efisiensi sistem.</p>
+<p>Linux menggunakan tehnik page aging agar adil dalam memilih page yang akan dihapus dari sistem. Ini berarti setiap page memiliki usia sesuai dengan berapa sering page itu diakses. Semakin sering sebuah page diakses, semakin muda page tersebut. Page yang tua adalah kandidat untuk diswap.</p>
+<h4 id="pengaksesan-memori-virtual-bersama">Pengaksesan memori virtual bersama</h4>
+<p>Memori virtual mempermudah proses untuk berbagi memori saat semua akses ke memori menggunakan tabel page. Proses yang akan berbagi memori virtual yang sama, page fisik yang sama direference oleh banyak proses. Tabel page untuk setiap proses mengandung anggota page table yang mempunyai PFN fisik yang sama.</p>
+<h4 id="efisiensi">Efisiensi</h4>
+<p>Desainer dari CPU dan sistem operasi berusaha meningkatkan kinerja dari sistem. Disamping membuat prosesor, memori semakin cepat, jalan terbaik adalah manggunakan cache. Berikut ini adalah beberapa cache dalam manajemen memori di linux:</p>
+<ol>
+<li>Page Cache
+Digunakan untuk meningkatkan akses ke image dan data dalam disk. Saat dibaca dari disk, page dicache di page cache. Jika page ini tidak dibutuhkan lagi pada suatu saat, tetapi dibutuhkan lagi pada saat yang lain, page ini dapat segera diambil dari page cache.</li>
+<li>Buffer Cache
+Page mungkin mengandung buffer data yang sedang digunakan oleh kernel, device driver dan lain-lain. Buffer cache tampak seperti daftar buffer. Contohnya, device driver membutuhkan buffer 256 bytes, adalah lebih cepat untuk mengambil buffer dari buffer cache daripada mengalokasikan page fisik lalu kemudian memecahnya menjadi 256 bytes buffer-buffer.</li>
+<li>Swap Cache
+Hanya page yang telah ditulis ditempatkan dalam swap file. Selama page ini tidak mengalami perubahan setelah ditulis ke dalam swap file, maka saat berikutnya page di swap out tidak perlu menuliskan kembali jika page telah ada di swap file. Di sistem yang sering mengalami swap, ini dapat menghemat akses disk yang tidak perlu.</li>
+</ol>
+<p>Salah satu implementasi yang umum dari hardware cache adalah di CPU, cache dari anggota tabel page. Dalam hal ini, CPU tidak secara langsung membaca tabel page, tetap mencache terjemahan page yang dibutuhkan.</p>
+<h4 id="load-dan-eksekusi-program">Load dan Eksekusi Program</h4>
+<ol>
+<li>Penempatan program dalam memori</li>
+</ol>
+<p>Linux membuat tabel-tabel fungsi untuk loading program, memberikan kesempatan kepada setiap fungsi untuk meload file yang diberikan saat sistem call exec dijalankan. Pertama-tama file binari dari page ditempatkan pada memori virtual. Hanya pada saat program mencoba mengakses page yang telah diberikan terjadi page fault, maka page akan diload ke memori fisik.</p>
+<ol>
+<li><p>Linking statis dan linking dinamis</p>
+</li>
+<li><p>Linking statis:
+librari-librari yang digunakan oleh program ditaruh secara langsung dalam file binari yang dapat dieksekusi. Kerugian dari linking statis adalah setiap program harus mengandung kopi library sistem yang umum.</p>
+</li>
+<li>Linking dinamis:
+hanya sekali meload librari sistem menuju memori. Linking dinamis lebih efisien dalam hal memori fisik dan ruang disk.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="deadlock.html" class="navigation navigation-prev " aria-label="Previous page: Deadlock">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="booting.html" class="navigation navigation-next " aria-label="Next page: System Booting Linux">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Manajemen Memori","level":"1.11","depth":1,"next":{"title":"System Booting Linux","level":"1.12","depth":1,"path":"booting.md","ref":"booting.md","articles":[]},"previous":{"title":"Deadlock","level":"1.10","depth":1,"path":"deadlock.md","ref":"deadlock.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manajemenMemori.md","mtime":"2019-05-20T04:33:33.475Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-20T05:50:11.134Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
